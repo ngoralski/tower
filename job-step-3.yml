@@ -1,0 +1,10 @@
+- name: step 3 task
+  hosts: all
+  tasks:
+    - name: step 3 run
+      command: echo 'step 3 OK $(date)'
+      register: step_3
+
+    - name: step 3 output
+      debug:
+        var: step_3

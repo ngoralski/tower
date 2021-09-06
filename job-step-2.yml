@@ -1,5 +1,10 @@
 - name: step 2 task
   hosts: all
   tasks:
-    - name: step 2
-      command: echo 'step 2 $(date)'
+    - name: step 2 run
+      command: sh -f /tmp/tata && echo 'step 2 OK $(date)' || echo 'step 2 KO $(date)'
+      register: step_2
+
+    - name: step 2 output
+      debug:
+        var: step_2

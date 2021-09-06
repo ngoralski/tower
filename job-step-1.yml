@@ -7,4 +7,4 @@
 
     - name: step 1 output
       debug:
-        msg: step_1
+        var: step_1
