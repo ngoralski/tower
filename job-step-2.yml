@@ -1,0 +1,5 @@
+- name: step 2 task
+  hosts: all
+  tasks:
+    - name: step 2
+      command: echo 'step 2 $(date)'
