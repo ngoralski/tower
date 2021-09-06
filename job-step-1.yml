@@ -1,5 +1,10 @@
 - name: step 1 task
   hosts: all
   tasks:
-    - name: step 1
-      command: echo 'step 1 $(date)'
+    - name: step 1 run
+      command: sh -f /tmp/toto && echo 'step 1 OK' || echo 'step 1 KO'
+      register: step_1
+
+    - name: step 1 output
+      debug:
+        msg: step_1
