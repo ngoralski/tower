@@ -1,0 +1,6 @@
+- name: just a job scheduled
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
