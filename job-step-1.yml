@@ -4,7 +4,7 @@
     - name: step 1 run
       tags:
         - step1
-      command: sh -f /tmp/toto && echo 'step 1 OK' || echo 'step 1 KO'
+      command: sh -f /tmp/toto && echo '{{ test_var1 }}' || echo 'step 1 KO'
       register: step_1
 
     - name: step 1 output
