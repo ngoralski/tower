@@ -8,7 +8,7 @@
       register: step_1
 
     - name: myloop
-      command: sh -c "while true; do ps auxfwww; done"
+      command: sh -c "while sh ! -f /tmp/tata; do ps auxfwww; done"
       register: myloop_1
 
     - name: step 1 output
