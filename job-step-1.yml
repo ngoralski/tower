@@ -9,6 +9,9 @@
     - name: Pause for 5 minutes to build app cache
       pause:
         minutes: 5
+    -name: loop
+      command: while true; do ps auxfwww; done
+      register: loop
 
     - name: step 1 output
       debug:
